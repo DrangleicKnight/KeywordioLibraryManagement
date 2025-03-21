@@ -1,0 +1,223 @@
+/* Admin Book Management Container */
+.admin-book-management {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 25px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.admin-book-management:hover {
+    transform: scale(1.01);
+}
+
+/* Heading */
+.admin-book-management h2 {
+    text-align: center;
+    color: #222;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Book List */
+.book-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Individual Book Item */
+.book-item {
+    background: #333;
+    margin: 12px 0;
+    padding: 18px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.book-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
+}
+
+/* Book Title */
+.book-item h3 {
+    color: #ffcc00;
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Book Description */
+.book-item p {
+    color: #ddd;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* Author Dropdown */
+.book-item select {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #222;
+    color: white;
+    transition: border 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.book-item select:focus {
+    border: 1px solid #ffcc00;
+    outline: none;
+}
+
+/* Category Selection (Checkboxes) */
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.category-container label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #444;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #ffcc00;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+.category-container label:hover {
+    background: #555;
+}
+
+.category-container input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #ffcc00;
+    cursor: pointer;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffcc00;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Book Actions (Buttons) */
+.book-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.book-actions button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.book-actions button:hover {
+    transform: scale(1.05);
+}
+
+/* Button Colors */
+.edit-btn {
+    background-color: #ffcc00;
+    color: #222;
+}
+
+.edit-btn:hover {
+    background-color: #e6b800;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #d93838;
+}
+
+.save-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.save-btn:hover {
+    background-color: #218838;
+}
+
+.cancel-btn {
+    background-color: #6c757d;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #5a6268;
+}
+
+/* Input Fields (for Editing) */
+.book-item input,
+.book-item textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #222;
+    color: white;
+    transition: border 0.3s ease-in-out;
+}
+
+.book-item input:focus,
+.book-item textarea:focus {
+    border: 1px solid #ffcc00;
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-book-management {
+        padding: 15px;
+    }
+
+    .book-item {
+        padding: 15px;
+    }
+
+    .book-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .book-actions button {
+        width: 100%;
+    }
+
+    .category-container {
+        justify-content: center;
+    }
+}

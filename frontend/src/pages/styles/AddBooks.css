@@ -1,0 +1,95 @@
+.admin-book-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.admin-book-box {
+    background: #2a2a3a;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+.admin-book-box h2 {
+    margin-bottom: 1.5rem;
+    color: #f1c40f;
+}
+
+.admin-book-box input,
+.admin-book-box select,
+.admin-book-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #666;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #2e2e3e;
+    color: white;
+}
+
+.admin-book-box textarea {
+    resize: none;
+    height: 80px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-btn {
+    background: #f1c40f;
+    color: #222;
+    font-size: 16px;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #d4ac0d;
+}
+
+.add-input-group {
+    display: flex;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.confirm-btn {
+    background: #27ae60;
+    color: white;
+    margin-top: 10px;
+    border: none;
+    padding: 0px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px;
+}
+
+.confirm-btn:hover {
+    background: #219150;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #f1c40f;
+    color: #222;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #d4ac0d;
+}

@@ -56,10 +56,12 @@ class BooksSerializer(serializers.ModelSerializer):
 class AdminSignupSerializer(serializers.ModelSerializer):
     class Meta:
         model = AdminUser
-        fields = ["id", "email", "password", "first_name", "last_name"]
+        fields = ["id", "email", "password"]
 
     def create(self, validated_data):
         validated_data["password"] = make_password(validated_data["password"])
+        validated_data["is_staff"] = True 
+        validated_data["is_superuser"] = True  
         return super().create(validated_data)
 
 class AdminLoginSerializer(serializers.Serializer):

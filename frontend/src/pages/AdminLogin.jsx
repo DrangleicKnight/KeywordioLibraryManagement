@@ -24,8 +24,8 @@ const AdminLogin = () => {
             localStorage.setItem("adminToken", response.data.token);
 
             alert("Login successful!");
-            window.location.reload();
             navigate("/books");
+            window.location.reload();
         } catch (error) {
             setError("Invalid email or password. Please try again.");
         } finally {

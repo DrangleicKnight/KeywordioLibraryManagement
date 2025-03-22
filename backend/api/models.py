@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser, BaseUserManager
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 
 class Author(models.Model):
     name = models.CharField(max_length=50, unique=True)  
@@ -44,10 +44,14 @@ class CustomUserManager(BaseUserManager):
         return self.create_user(email, password, **extra_fields)
 
 
-class AdminUser(AbstractUser):
+class AdminUser(AbstractBaseUser, PermissionsMixin): 
     email = models.EmailField(unique=True)
-    
-    USERNAME_FIELD = 'email'
+    is_staff = models.BooleanField(default=False)  
+    is_superuser = models.BooleanField(default=False) 
+
+    objects = CustomUserManager()
+
+    USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
 
     def __str__(self):

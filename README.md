@@ -113,13 +113,3 @@ npm run dev   # Start React Dev Server
 
 ## **📜 License**
 This project is for educational purposes only.  
-
----
-
-### **✅ Next Steps**
-1. Copy this `README.md` to your GitHub repo.  
-2. Replace `<your-repo-URL>` with the actual repo link.  
-3. Add your **MySQL credentials** in `settings.py`.  
-4. Add screenshots of your app in the `🖼️ Screenshots` section.  
-
-Let me know if you need **any modifications**! 🚀
